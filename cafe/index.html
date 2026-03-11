@@ -1,0 +1,156 @@
+<think>
+
+</think>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Coffee House</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../cafe/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Artisan Coffee</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#brewing">Brewing</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>The Artisan Coffee House</h1>
+            <p>Crafting Excellence, One Cup at a Time</p>
+            <a href="#products" class="btn">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>We're dedicated to sourcing the finest beans and roasting them to perfection. Our passion for coffee shines through in every cup.</p>
+    </section>
+
+    <!-- Pour-Over Brewing Process Section -->
+    <section id="brewing" class="brewing">
+        <h2>The Art of Pour-Over Coffee</h2>
+        
+        <div class="brewing-content">
+            <div class="step-container">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Select Your Beans</h3>
+                    <p>Choose between our medium and dark roast beans, each carefully selected for their unique flavor profiles.</p>
+                </div>
+            </div>
+
+            <div class="step-container">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Weigh Your Grind</h3>
+                    <p>Precise measurements are crucial. We grind fresh, just before brewing to ensure maximum freshness.</p>
+                </div>
+            </div>
+
+            <div class="step-container">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Heat Your Water</h3>
+                    <p>Water between 195-205°F is ideal. Hot enough to extract flavors, but not so hot as to burn the coffee.</p>
+                </div>
+            </div>
+
+            <div class="step-container">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Bloom the Coffee</h3>
+                    <p>Pour just enough water to saturate the grounds and let them bloom for 30-45 seconds. This releases CO2.</p>
+                </div>
+            </div>
+
+            <div class="step-container">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Slow Pouring</h3>
+                    <p>Pour slowly in circular motions to evenly saturate the grounds, maintaining a steady flow rate.</p>
+                </div>
+            </div>
+
+            <div class="step-container">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3>Enjoy Your Brew</h3>
+                    <p>Once all water has passed through, you have a perfectly brewed cup of pour-over coffee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Premium Coffee Beans</h2>
+        <div class="products-grid">
+            <!-- Medium Roast Card -->
+            <div class="product-card" data-roast="medium">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1559056199-94e2edf53cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medium Roast Coffee Beans">
+                    <div class="card-overlay">
+                        <h3>Medium Roast</h3>
+                        <p>Balanced & Bright</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4 class="roast-type">Medium Roast - Medium Body</h4>
+                    <p class="description">Notes of citrus, apple, and subtle chocolate. Perfect for those who enjoy a balanced cup with bright acidity.</p>
+                    <ul class="flavor-notes">
+                        <li>Citrus</li>
+                        <li>Apple</li>
+                        <li>Mild Chocolate</li>
+                        <li>Caramel</li>
+                    </ul>
+                    <div class="price">$14.99/lb</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Dark Roast Card -->
+            <div class="product-card" data-roast="dark">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1559496437-e5f22abca085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dark Roast Coffee Beans">
+                    <div class="card-overlay">
+                        <h3>Dark Roast</h3>
+                        <p>Rich & Intense</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4 class="roast-type">Dark Roast - Full Body</h4>
+                    <p class="description">Deep, smoky notes with hints of dark chocolate and charred caramel. Bold flavor for the serious coffee drinker.</p>
+                    <ul class="flavor-notes">
+                        <li>Dark Chocolate</li>
+                        <li>Caramelized Sugar</li>
+                        <li>Coffee Oil</li>
+                        <li>Slight Bitterness</li>
+                    </ul>
+                    <div class="price">$16.99/lb</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2024 The Artisan Coffee House. All rights reserved.</p>
+        <p>Contact us: info@artisancoffeehouse.com | Phone: (555) 123-4567</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

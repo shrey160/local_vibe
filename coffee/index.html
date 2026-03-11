@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee - Dark Roast Experience</title>
+    <link rel="stylesheet" href="../coffee/css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#brewing">Brewing</a>
+    <a href="#products">Products</a>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Coffee House</h1>
+        <p>"Sip the dark. Experience the rich."</p>
+    </div>
+</div>
+
+<!-- Introduction Section -->
+<section id="about">
+    <h2 class="section-title">About Our Roast</h2>
+    <div class="intro-text">
+        <p>
+            At Coffee House, we blend traditional Ethiopian coffee with modern brewing methods to create 
+            unparalleled dark roasts. Sourced from the high altitudes of Ethiopia and Guatemala, our beans 
+            are fermented naturally and roasted at 640°F to bring out bold, chocolatey, and citrusy notes.
+        </p>
+        <p>
+            Our dark roast coffee is perfect for those who love rich flavors with hints of caramelized sweetness.
+            Whether it's a morning cup or a late-night sipping session, our beans elevate every moment in life.
+        </p>
+    </div>
+</section>
+
+<!-- Brewing Process Section -->
+<section id="brewing" style="background-color: #1a1a1a;">
+    <h2 class="section-title">The Art of Brewing</h2>
+    <div class="steps-container">
+        <div class="step">
+            <span class="step-number">#1</span>
+            <h3>Coffee Selection</h3>
+            <p>We curate premium coffee beans from the finest Arabica and Robusta varieties, each representing centuries of tradition and natural selection.</p>
+        </div>
+        <div class="step">
+            <span class="step-number">#2</span>
+            <h3>Natural Fermentation</h3>
+            <p>The beans undergo natural fermentation for 12 hours, developing complex fruit flavors while retaining their rich aroma.</p>
+        </div>
+        <div class="step">
+            <span class="step-number">#3</span>
+            <h3>Light Roasting</h3>
+            <p>Roasted at exactly 640°F, we eliminate all green coffee notes and transform them into deep chocolate, caramelized, and nutty flavors.</p>
+        </div>
+        <div class="step">
+            <span class="step-number">#4</span>
+            <h3>Packaging</h3>
+            <p>We keep our beans fresh until they're ready. Our packaging prevents moisture damage, ensuring maximum flavor and aroma.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+    <h2 class="section-title">Our Premium Collection</h2>
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="card-image">
+                <img src="../coffee/products/latte-dark-roast.jpg" alt="Latte Dark Roast" loading="lazy">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Classic Latte</h3>
+                <p class="product-desc">Perfect espresso base with steamed milk foam for that perfect latte texture and rich coffee intensity.</p>
+                <span class="price-tag">$4.95</span>
+                <button class="add-btn" id="addLatteBtn" data-product="Latte Dark Roast">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="card-image">
+                <img src="../coffee/products/mocha-dark-roast.jpg" alt="Mocha Dark Roast" loading="lazy">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Mocha Special</h3>
+                <p class="product-desc">Espresso with rich chocolate ganache and mocha cream. A decadent treat for the sophisticated palate.</p>
+                <span class="price-tag">$5.45</span>
+                <button class="add-btn" id="addMochaBtn" data-product="Mocha Dark Roast">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="card-image">
+                <img src="../coffee/products/cappuccino-dark-roast.jpg" alt="Cappuccino Dark Roast" loading="lazy">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">Cappuccino</h3>
+                <p class="product-desc">A classic Italian espresso with steamed milk and a layer of milk foam. Balanced and creamy.</p>
+                <span class="price-tag">$4.75</span>
+                <button class="add-btn" id="addCappuccinoBtn" data-product="Cappuccino Dark Roast">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Coffee House. All rights reserved.</p>
+</footer>
+
+<script src="../coffee/js/script.js"></script>
+<script>
+// JavaScript functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Cart functionality
+    const addButtons = document.querySelectorAll('.add-btn');
+    
+    addButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const product = this.getAttribute('data-product');
+            alert(`Added ${product} to cart!`);
+            
+            // Update cart display
+            document.querySelector('#cart-count').textContent = '10';
+            setTimeout(() => location.reload(), 500);
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Console log for verification
+    console.log("Coffee House website loaded successfully!");
+    console.log("Navigation ready for dark roast coffee experience.");
+});
+</script>
+
+</body>
+</html>
